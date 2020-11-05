@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  color: white;
+  cursor: pointer;
+
+  .logo {
+    margin-left: 8.5%;
+    font-size: 23px;
+  }
+
+  .navigationBar {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 18px;
+    margin-top: 2px;
+
+    h5 {
+      margin-left: 25px;
+    }
+
+    h5:hover {
+      border-bottom: solid white;
+    }
+  }
+}

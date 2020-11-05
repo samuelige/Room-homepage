@@ -1,0 +1,87 @@
+@import url(https://fonts.google.com/specimen/Spartan);
+.grid-container {
+  font-family: "Spartan";
+  display: grid;
+  grid-template-columns: 2fr, 2fr 2fr 2fr;
+  height: 150vh;
+  //   padding: 0px 5% 0px 5%;
+
+  .homepage {
+    grid-column: 1 / 6;
+    grid-row: 1/6;
+    background-image: url(../../images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .shopnow {
+    grid-column: 6/9;
+    grid-row: 1/6;
+    background-color: hsl(0, 0%, 100%);
+
+    .discover {
+      padding: 10% 17% 8% 17%;
+
+      h2 {
+        font-size: 40px;
+        font-weight: 900;
+      }
+
+      p {
+        margin-top: -2%;
+        font-size: 12px;
+        opacity: 70%;
+        margin-bottom: 30px;
+      }
+
+      .shop {
+        display: flex;
+
+        h4 {
+          text-align: center;
+          margin-top: 1%;
+          letter-spacing: 1em;
+          opacity: 70%;
+          cursor: pointer;
+        }
+
+        .MuiSvgIcon-root {
+          margin-left: 60px;
+          opacity: 70%;
+        }
+      }
+    }
+  }
+  .discussImage {
+    grid-area: discussImage;
+    grid-column: 1;
+    grid-row: 7;
+  }
+  .aboutpage {
+    grid-area: aboutpage;
+    grid-column: 2/7;
+    grid-row: 7;
+    font-size: 12px;
+    padding-left: 35px;
+    background-color: hsl(0, 0%, 100%);
+
+    h3 {
+      margin-top: 20%;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+    p {
+      opacity: 70%;
+    }
+  }
+  .sample {
+    grid-area: sample;
+    grid-column: 8;
+    grid-row: 7;
+  }
+
+  .discussImage,
+  .aboutpage,
+  .sample {
+    margin-top: -391px;
+  }
+}
