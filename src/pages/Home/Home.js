@@ -36,7 +36,7 @@ const Home = () => {
             </div>
 
             <div className="discussImage">
-                <img src={aboutDark} alt="" srcset=""/>
+                {/* <img src={aboutDark} alt="" srcset=""/> */}
             </div>
             <div className="aboutpage">
                 <h3>ABOUT OUR FURNITURE</h3>
@@ -49,7 +49,7 @@ const Home = () => {
                 </p>
             </div>
             <div className="sample">
-                <img src={aboutLight} alt="" srcset=""/>
+                {/* <img src={aboutLight} alt="" srcset=""/> */}
             </div>
             
         </div>
