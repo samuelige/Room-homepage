@@ -2,8 +2,8 @@
 .grid-container {
   font-family: "Spartan";
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr 1fr;
-  height: 150vh;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  height: 180vh;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "homepage homepage shopnow shopnow"
@@ -22,7 +22,7 @@
     background-color: hsl(0, 0%, 100%);
 
     .discover {
-      padding: 10% 17% 8% 17%;
+      padding: 13% 17% 8% 17%;
 
       h2 {
         font-size: 40px;
@@ -63,11 +63,11 @@
   .aboutpage {
     grid-area: aboutpage;
     font-size: 12px;
-    padding-left: 35px;
+    padding: 0px 8% 0px 8%;
     background-color: hsl(0, 0%, 100%);
 
     h3 {
-      margin-top: 20%;
+      margin-top: 8%;
       letter-spacing: 5px;
       font-weight: bold;
     }
@@ -85,7 +85,7 @@
   .discussImage,
   .aboutpage,
   .sample {
-    margin-top: -236px;
+    margin-top: -336px;
   }
 }
 
@@ -99,7 +99,11 @@
       "discussImage"
       "aboutpage"
       "sample";
-    grid-gap: 240px;
+    grid-gap: 350px;
+
+    .homepage {
+      background-image: url(../../images/mobile-image-hero-1.jpg);
+    }
 
     .homepage,
     .discussImage,
@@ -107,8 +111,24 @@
       background-size: contain;
       height: 150vh;
     }
+
+    .shopnow {
+      margin-top: -263%;
+      padding-top: -10px;
+    }
+    .discussImage {
+      margin-top: -127.8%;
+    }
     .aboutpage {
-      // margin-top: ;
+      margin-top: -160%;
+
+      p {
+        margin-top: 30px;
+      }
+    }
+
+    .sample {
+      margin-top: -180%;
     }
   }
 }
