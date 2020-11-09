@@ -1,58 +1,40 @@
 import React from 'react'
-import Button from '../../Components/button/button'
+// import Button from '../../Components/button/button'
 import Header from '../../Components/header/header'
 import './Home.scss'
 import aboutDark from '../../images/aboutdark.jpg'
 import aboutLight from '../../images/aboutlight.jpg'
 import TrendingFlatIcon from '@material-ui/icons/TrendingFlat';
+import { useSelector } from 'react-redux'
+import Card from '../../Components/Card'
+import '../../Components/Card.scss'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 
 const Home = () => {
+    const state = useSelector(state => state.slide)
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
     return (
-        <div className='grid-container'>
-            <div className="homepage">
-                <Header/>
-            </div>
-            <div className="shopnow">
-               <div className="discover">
-                    <h2>Discover innovative
-                    <br/>ways to decorate</h2>
-
-                    <p>We provide unmatched quality, comfort, and style for property 
-                        owners across the country. Our experts combine form 
-                        and function in bringing your vision to life. Create a room in your own 
-                        style with our collection and make your property a reflection of you 
-                        and what you love. 
-                    </p>
-
-                    <div className="shop">
-                        <h4>SHOP NOW </h4>
-                        <TrendingFlatIcon />
-                    </div>
-                </div>
-                
-
-                <Button />
-            </div>
-
-            <div className="discussImage">
-                {/* <img src={aboutDark} alt="" srcset=""/> */}
-            </div>
-            <div className="aboutpage">
-                <h3>ABOUT OUR FURNITURE</h3>
-
-                <p>Our multifunctional collection blends design and function to suit your individual 
-                    taste. Make each room unique, or pick a cohesive theme that best express your 
-                    interests and what inspires you. Find the furniture pieces you need, from 
-                    traditional to contemporary styles or anything in between. Product specialists 
-                    are available to help you create your dream space. 
-                </p>
-            </div>
-            <div className="sample">
-                {/* <img src={aboutLight} alt="" srcset=""/> */}
-            </div>
-            
-        </div>
+        
+        <Slider {...settings}>
+            {
+                state && state.map((item) => {
+                    return <Card key={item.id} home_className={item.home_className} shop_className={item.shop_className} idea={item.idea} idea_cont={item.idea_cont} mission={item.mission} shop_now={item.shop_now} discuss_className={item.discuss_className} about_className={item.about_className} title={item.title} about={item.about} sampla_className={item.sampla_className} />
+                })
+            }
+        </Slider>
+        
+        
     )
 }
 

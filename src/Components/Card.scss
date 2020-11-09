@@ -1,0 +1,166 @@
+@import url(https://fonts.google.com/specimen/Spartan);
+.grid-container {
+  font-family: "Spartan";
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  height: 180vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "homepage homepage shopnow shopnow"
+    "homepage homepage shopnow shopnow"
+    "homepage homepage shopnow shopnow"
+    "discussImage aboutpage aboutpage sample";
+
+  .homepage,
+  .homepage_slide2,
+  .homepage_slide3 {
+    grid-area: homepage;
+  }
+
+  .shopnow,
+  .shopnow_slide2,
+  .shopnow_slide3 {
+    grid-area: shopnow;
+  }
+
+  .discussImage {
+    grid-area: discussImage;
+  }
+
+  .aboutpage {
+    grid-area: aboutpage;
+  }
+
+  .sample {
+    grid-area: sample;
+  }
+  .homepage {
+    background-image: url(../images/desktop-image-hero-1.jpg);
+  }
+  .homepage_slide2 {
+    background-image: url(../images/desktop-image-hero-2.jpg);
+  }
+  .homepage_slide3 {
+    background-image: url(../images/desktop-image-hero-3.jpg);
+  }
+
+  .homepage,
+  .homepage_slide2,
+  .homepage_slide3 {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .shopnow,
+  .shopnow_slide2,
+  .shopnow_slide3 {
+    background-color: hsl(0, 0%, 100%);
+
+    .discover {
+      padding: 13% 17% 8% 17%;
+
+      h2 {
+        font-size: 40px;
+        font-weight: 900;
+      }
+
+      p {
+        margin-top: -2%;
+        font-size: 12px;
+        opacity: 70%;
+        margin-bottom: 30px;
+      }
+
+      .shop {
+        display: flex;
+
+        h4 {
+          text-align: center;
+          margin-top: 1%;
+          letter-spacing: 1em;
+          opacity: 70%;
+          cursor: pointer;
+        }
+
+        .MuiSvgIcon-root {
+          margin-left: 60px;
+          opacity: 70%;
+        }
+      }
+    }
+  }
+  .discussImage {
+    background-image: url(../images/aboutdark.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .aboutpage {
+    font-size: 12px;
+    padding: 0px 8% 0px 8%;
+    background-color: hsl(0, 0%, 100%);
+
+    h3 {
+      margin-top: 8%;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+    p {
+      opacity: 70%;
+    }
+  }
+  .sample {
+    background-image: url(../images/aboutlight.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .discussImage,
+  .aboutpage,
+  .sample {
+    margin-top: -336px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "homepage"
+      "shopnow"
+      "discussImage"
+      "aboutpage"
+      "sample";
+    grid-gap: 350px;
+
+    .homepage {
+      background-image: url(../images/mobile-image-hero-1.jpg);
+    }
+
+    .homepage,
+    .discussImage,
+    .sample {
+      background-size: contain;
+      height: 150vh;
+    }
+
+    .shopnow {
+      margin-top: -263%;
+      padding-top: -10px;
+    }
+    .discussImage {
+      margin-top: -127.8%;
+    }
+    .aboutpage {
+      margin-top: -160%;
+
+      p {
+        margin-top: 30px;
+      }
+    }
+
+    .sample {
+      margin-top: -180%;
+    }
+  }
+}
